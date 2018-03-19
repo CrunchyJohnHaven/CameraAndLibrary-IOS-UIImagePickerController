@@ -33,11 +33,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //            tell camera not to go into edit mode
             imagePicker.allowsEditing = false
 //            present the camera controller on the bottom of the screen
-            self.presentViewController(imagePicker, animated: true, completion: nil)
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     @IBAction func openPhotoLibraryButton(_ sender: Any) {
-        
+//        check if device can access photo library
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            //declase another image picker's variable
+            var imagePicker = UIImagePickerController()
+            //Set a delegate for imagePicker
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            // we will see a black window where we can zoom move and crop
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
     
 
