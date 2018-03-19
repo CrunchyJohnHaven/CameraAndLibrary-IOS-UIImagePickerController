@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWs-bN-Fqk">
                                 <rect key="frame" x="318.5" y="11" width="34.5" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PD1-8g-mta"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FV1-Tz-1oC">
                                 <rect key="frame" x="0.0" y="48.5" width="375" height="414"/>
@@ -78,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="imagePicked" destination="EsZ-xe-NoK" id="THN-ep-qmo"/>
+                        <outlet property="imageView" destination="EsZ-xe-NoK" id="ZJe-du-1yh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
